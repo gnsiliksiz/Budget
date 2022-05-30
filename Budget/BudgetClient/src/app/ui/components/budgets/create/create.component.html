@@ -1,0 +1,18 @@
+
+<mat-form-field appearance="fill">
+  <mat-label>Gelir/Gider</mat-label >
+  <input matInput type="number" min="0" valu="0" #txtQuantity >
+</mat-form-field>
+Bütçe Tarihi: <input matInput type="date" [(ngModel)]="DateSelected">
+
+<br>
+Bütçe Tipi:
+<div class="col-sm-10">
+  <select name="BudgetType" class="form-control" [(ngModel)]="selected">
+    <option >Seçiniz</option>
+     <option [ngValue]="0" > Gelir</option>
+     <option [ngValue]="1" > Gider</option>
+  </select>
+</div>
+<br>
+<button mat-button (click)="create(txtQuantity)" color="primary" class="btn">Kaydet</button>
